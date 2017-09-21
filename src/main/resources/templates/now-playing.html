@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Now Playing</title>
+</head>
+<body>
+These movies are playing in theaters:
+<div th:each="movie: ${movies}">
+    <img width="150px" th:src="'http://image.tmdb.org/t/p/original' + ${movie.posterPath}"/>
+    <span th:text="${movie.title}"></span>
+</div>
+
+</body>
+</html>
